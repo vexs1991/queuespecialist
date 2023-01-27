@@ -1,0 +1,50 @@
+current_site: hetzner-research
+registerurl: "https://XXXX"
+login_url: "https://XXXX"
+findqueue_url: "https://XXXX"
+min_sleep: 1
+max_sleep: 5
+min_sleep_short: 0.01
+max_sleep_short: 0.5
+tg-bottoken: XXXX
+tg-chatid: XXXX
+sale: globaljourney
+
+sel:
+  login:
+   username: "//*[@data-test-id='login-username']"
+   password: "//*[@data-test-id='login-password']"
+   login_btn: "//*[@data-test-id='button-login']"
+  queuebtn:
+   globaljourney: "(//*[@class='row ticketinfo__row']//button)[1]"
+   presale: "(//*[@class='row ticketinfo__row']//button)[2]"
+   worldwidesale: "(//*[@class='row ticketinfo__row']//button)[3]"
+  queuecheck:
+    text: "YOU WILL BE AUTOMATICALLY REDIRECTED TO THE SHOP"
+
+location:
+  hetzner-research:
+    ip: 127.0.0.1
+    start_port: 6901
+
+wd:
+  wait: 5
+  poolint: 0.1
+
+users:
+  - username: XXXX
+    login_location: hetzner-research
+    password: XXXX
+    fname: XXXX
+    lname: XXXX
+    address: XXXX
+    address_nr: XXXX
+    plz: XXXX
+    city: XXXX
+    country: XXXX
+    nationality: XXXX
+    number: +4369912345678
+    gender: male
+    activate_link: 'XXXX'
+    activated: True
+    prefered_weekend: second
