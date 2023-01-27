@@ -1,4 +1,4 @@
-# prerequesites "pip install pyyaml docker"
+# prerequesites "pip install pyyaml docker" and a running docker instance with permissions to build / deploy images and run instances
 import yaml
 import docker
 import os
