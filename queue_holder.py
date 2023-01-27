@@ -159,7 +159,7 @@ send_message(f'{vnchost}: http://{vncip}:{vncport}  - READY TO ORDER {username}'
 
 # xfce4-terminal -e '/bin/bash -c "/usr/bin/python3 /headless/test.py > /headless/log.txt 2>&1"'
 
-sleep(600)
+sleep(6000)
 driver.quit()
 
 #xfce4-screenshooter -f -s ~/screen.jpeg
