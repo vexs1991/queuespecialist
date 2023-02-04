@@ -20,7 +20,8 @@ sel:
    presale: "(//*[@class='row ticketinfo__row']//button)[2]"
    worldwidesale: "(//*[@class='row ticketinfo__row']//button)[3]"
   queuecheck:
-    text: "YOU WILL BE AUTOMATICALLY REDIRECTED TO THE SHOP"
+    text: "automtically redirected"
+    url: "queue"
 
 location:
   hetzner-research:

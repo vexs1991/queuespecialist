@@ -39,6 +39,7 @@ vncip=getenv('MY_IP')
 vncport=getenv('MY_PORT')
 
 chromeOptions = Options()
+chromeOptions.add_experimental_option("detach", True)
 chromeOptions.add_argument('--no-sandbox')
 chromeOptions.add_argument('--disable-dev-shm-usage')
 chromeOptions.add_argument('--test-type')
@@ -116,17 +117,18 @@ def check_queue_button():
     except WebDriverException:
         info("Element is not clickable")
 
-    if data['sel']['queuecheck']['text'] in driver.page_source:
+    if data['sel']['queuecheck']['text'].lower() in driver.page_source.lower() or data['sel']['queuecheck']['url'] in driver.current_url:
         info("we are in queue now!!")
         send_message(f'{vnchost}: http://{vncip}:{vncport}  - we are in queue now {username}')
         return True
+    info(driver.current_url)
 
     rand_sleep_short()
     driver.get(data['findqueue_url'])
     return False
 
 def verify_out_off_queue():
-    if data['sel']['queuecheck']['text'] in driver.page_source:
+    if data['sel']['queuecheck']['text'].lower() in driver.page_source.lower() or data['sel']['queuecheck']['url'] in driver.current_url:
         info("still in queue")
         return False
     return True
